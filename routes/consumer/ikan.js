@@ -80,4 +80,15 @@ router.get("/ikan/detail/:idIkan", async(req, res) => {
     }
 });
 
+// GET detail_seller (consumer)
+router.get("/seller/all", async(req, res) => {
+    try {
+
+        const query = `select name, location, roles, photo_url from seller;`;
+        await GetOutput(query, res);
+    } catch (err) {
+        return ErrorResponse(err, res);
+    }
+});
+
 module.exports = router;

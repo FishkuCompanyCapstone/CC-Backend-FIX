@@ -1,6 +1,6 @@
 const e = require("express");
 const jwt = require("jsonwebtoken");
-const rahasia = "ini_adalah_rahasia";
+const rahasia = process.env.SECRET;
 
 // membuat token
 CreateToken = (payload) => {

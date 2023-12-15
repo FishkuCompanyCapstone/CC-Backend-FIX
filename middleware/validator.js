@@ -1,6 +1,6 @@
 const Validator = require("fastest-validator");
 const v = new Validator({
-    secretKey: "364517fdef24070994c6b518de138e37fe0e43ec"
+    secretKey: process.env.secretKey
 });
 
 const Validation = (cek, schema, res) => {
